@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "wynncraft",
+    "name": "WynnClient",
+    "description": "WynnClient",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "oleaf.codes",
+    "updateUrl": "NO",
+    "authorList": [
+      "Leaf"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
