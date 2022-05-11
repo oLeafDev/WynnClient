@@ -1,0 +1,33 @@
+package wynn.ui.base.popup;
+
+import java.awt.Dimension;
+import java.awt.Point;
+import java.awt.Rectangle;
+
+import wynn.ui.base.base.IInterface;
+
+/**
+ * Static pop-up positioner that positions the pop-up at a fixed position relative to the mouse pointer.
+ * @author lukflug
+ */
+public class MousePositioner implements IPopupPositioner {
+	/**
+	 * The offset.
+	 */
+	protected Point offset;
+	
+	/**
+	 * Constructor.
+	 * @param offset the offset relative to the current cursor position
+	 */
+	public MousePositioner (Point offset) {
+		this.offset=offset;
+	}
+
+	@Override
+	public Point getPosition (IInterface inter, Dimension popup, Rectangle component, Rectangle panel) {
+		Point pos=inter.getMouse();
+		pos.translate(offset.x,offset.y);
+		return pos;
+	}
+}
